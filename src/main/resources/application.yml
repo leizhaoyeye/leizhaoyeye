@@ -1,0 +1,61 @@
+spring:
+  profiles:
+    active: mybatisplus
+  # 配置数据源
+  datasource:
+    # 配置数据源
+    driver-class-name: com.mysql.jdbc.Driver
+    # 使用druid连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/zhaolei?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&useSSL=true
+    username: root
+    password: root
+
+  spring:
+    rabbitmq:
+      host: localhost
+      port: 5672
+      virtual-host: /itcast
+      username: heima
+      password: heima
+
+
+#tomcat端口
+server:
+  port: 8080
+#日志记录级别
+logging:
+  level:
+    com.itheima: debug
+    org.springframework: info
+
+
+#FTP   ftp://10.50.23.21/
+ftp:
+  #  FTP的IP地址
+  ftpHost: "10.50.23.21"
+  #  FTP的端口 默认是21
+  ftpPort: 21
+  #  FTP登陆的用户名
+  ftpUserName: "jzzd"
+  #  FTP登陆密码
+  ftpPassword: "jzzd123456"
+  #  FTP服务器上指定目录
+  ftpPath: "/00"
+  #  FTP服务器文件路径
+  filePath: "/00"
+  #  FTP服务器上文件名
+  fileName: ""
+  #  FTP上传文件夹位置
+  uploadFile: "E:/upload"
+  #  FTP上传文件名称
+  uploadFileName: "5.jpg"
+  #  FTP下载指定文件夹
+  downloadFile: "E:/download"
+  #  FTP下载 指定文件名
+  downloadFileName: "5.jpg"
+
+
+
+
+

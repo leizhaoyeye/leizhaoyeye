@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue2.6.10.js"></script>
+</head>
+<body>
+<!-- view 模板-->
+<div id="app">
+    <!-- 将vue实例中的数据展示到模板中 -->
+    <h1>{{name}}</h1>
+    <input type="text" v-model="name" />
+    <input type="text" v-model="num" />
+    <!--<input type="button" value="++" v-on:click="num++">-->
+    <input type="button" value="++" @click="num++">
+    <h2>{{num}}</h2>
+</div>
+</body>
+<script>
+    // 创建vue实例 --  model
+    var app = new Vue({
+        // 锁定模板,将当前vue实例中的数据双向绑定到指定模板中
+        el:"#app",
+        // 数据
+        data:{
+            name:"黑马程序员",
+            num:0
+        },
+        methods:{
+
+        }
+    });
+</script>
+</html>
